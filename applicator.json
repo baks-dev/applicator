@@ -15,12 +15,13 @@
   },
 
   "homepage": {
-    "type": "html|json|js|api",
-    "path": "/index.html",
+    "type": "json|js",
+    "path": "/homepage.js",
     "params": {
       "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
     }
   },
+
 
   "detail": {
     "type": "html|json|js|api",
@@ -28,6 +29,7 @@
     "params": {
       "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd&username={user}"
     },
+
 
     "more": {
       "type": "html|json|js|api",
