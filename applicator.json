@@ -15,7 +15,6 @@
     "url": "example.ru"
   },
 
-
   "homepage": {
     "type": "json|js",
     "path": "/homepage.js",
