@@ -8,8 +8,7 @@
   "category": "audio|video|stream|web",
 
   "contacts": {
-    "email" : "example@email.com",
-    "telegram" : "https://t.me/helpiptv"
+    "email" : "example@email.com"
   },
 
   "server": {
