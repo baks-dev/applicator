@@ -4,7 +4,8 @@
   "languageCode": "ru",
   "countryCode": "RU",
   "version": "0.0.79",
-  "image" : "https://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/card.jpg",
+  "image" : "card.jpg",
+  "icon" : "card.jpg",
 
   "category": "audio|video|stream|web",
 
