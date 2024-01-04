@@ -7,12 +7,7 @@
 
   "category": "audio|video|stream|web",
 
-  "server": {
-    "url": "example.ru",
-    "header": {
-      "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
-    }
-  },
+
 
   "homepage": {
     "type": "json|js",
