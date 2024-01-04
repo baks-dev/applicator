@@ -1,0 +1,56 @@
+{
+  "namespace": "app/applicator",
+  "lang": "ru_RU",
+  "languageCode": "ru",
+  "countryCode": "RU",
+  "version": "0.0.79",
+
+  "category": "audio|video|stream|web",
+
+  "server": {
+    "url": "api-maps.yandex.ru",
+    "header": {
+      "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
+    }
+  },
+
+  "homepage": {
+    "type": "html|json|js|api",
+    "path": "/index.html",
+    "params": {
+      "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f"
+    }
+  },
+
+  "detail": {
+    "type": "html|json|js|api",
+    "path": "/detail.js",
+    "params": {
+      "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f&username={user}"
+    },
+
+    "more": {
+      "type": "html|json|js|api",
+      "path": "/more.js",
+      "params": {
+        "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f&username={user}"
+      }
+    }
+  },
+
+
+
+  "debug": {
+    "path": "/debug",
+    "params": {
+      "device": "{device}",
+      "message": "{message}",
+      "url": "{url}",
+      "line": "{line}"
+    }
+  }
+
+
+
+
+}
