@@ -8,7 +8,7 @@
   "category": "audio|video|stream|web",
 
   "server": {
-    "url": "api-maps.yandex.ru",
+    "url": "example.ru",
     "header": {
       "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
     }
@@ -18,7 +18,7 @@
     "type": "html|json|js|api",
     "path": "/index.html",
     "params": {
-      "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f"
+      "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
     }
   },
 
@@ -26,14 +26,14 @@
     "type": "html|json|js|api",
     "path": "/detail.js",
     "params": {
-      "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f&username={user}"
+      "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd&username={user}"
     },
 
     "more": {
       "type": "html|json|js|api",
       "path": "/more.js",
       "params": {
-        "apikey": "307a2ab6-52d7-4361-9440-0441bf7fcb1f&username={user}"
+        "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd&username={user}"
       }
     }
   },
