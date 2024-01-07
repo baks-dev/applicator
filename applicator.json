@@ -13,22 +13,13 @@
 
   "contacts": {
     "email" : "example@email.com",
-    "telegram" : "https://t.me/helpiptv"
+    "telegram" : "https://t.me/help"
   },
-
-  "server": {
-    "url": "example.ru"
-  },
-
 
   "homepage": {
-    "type": "json|js",
-    "path": "/homepage.js",
-    "params": {
-      "apikey": "iUNtRcio-52d7-0732-0919-RFvRWadjjOsd"
-    }
+    "type": "js",
+    "path": "homepage.js"
   },
-
 
   "detail": {
     "type": "html|json|js|api",
