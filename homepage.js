@@ -1,6 +1,38 @@
 
 
-function applicator(param) {
+async function applicator(param) {
+
+    var table = [];
+
+    let response = await fetch('https://tmdb.cub.red/?sort=now_playing&page=1');
+
+    let json =  await response.json(); // прочитать тело ответа как текст
+
+    //console.log(json.results);
+
+    json.results.forEach(function (item, index) {
+
+        const date = new Date(item.release_date);
+
+        let itm = {};
+        itm.id = item.id
+        itm.title = item.title
+        itm.image = 'https://imagetmdb.cub.red/t/p/w300'+item.poster_path
+        itm.year = date.getFullYear();
+        itm.rate = item.vote_average
+
+        table[index] = itm;
+
+
+    });
+
+
+    //console.log(table);
+
+    return table;
+}
+
+function applicatorOLD(param) {
 
     var table = [];
 
@@ -13,11 +45,12 @@ function applicator(param) {
 
         const json = JSON.parse(request.responseText);
 
+
         json.results.forEach(function (item, index) {
 
-            const date = new Date(item.release_date);
+            var date = new Date(item.release_date);
 
-            let itm = {};
+            var itm = {};
             itm.id = item.id
             itm.title = item.title
             itm.image = item.poster_path
@@ -33,4 +66,6 @@ function applicator(param) {
 
     return table;
 }
+
+
 
