@@ -17,7 +17,7 @@ async function applicator(param) {
         let itm = {};
         itm.id = item.id
         itm.title = item.title
-        itm.image = item.poster_path
+        itm.image = 'https://imagetmdb.cub.red/t/p/w300'+item.poster_path
         itm.year = date.getFullYear();
         itm.rate = item.vote_average
 
