@@ -20,7 +20,7 @@
   "homepage": {
     "type": "js",
     "path": "homepage.js",
-    "files": ["js/filmix.js", "js/collaps.js"]
+    "files": ["homepage.js", "js/filmix.js", "js/collaps.js"]
   },
 
   "detail": {
