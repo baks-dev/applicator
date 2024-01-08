@@ -19,12 +19,12 @@ async function applicator(param) {
         const date = new Date(item.release_date ? item.release_date : item.first_air_date);
 
         let itm = {};
-        itm.id = item.id
+
+        itm.id = item.id;
         itm.title = item.title ? item.title : item.name;
-        itm.image = 'https://imagetmdb.cub.red/t/p/w300' + item.poster_path
+        itm.image = 'https://imagetmdb.cub.red/t/p/w300' + item.poster_path;
         itm.year = date.getFullYear();
         itm.rate = item.vote_average.toFixed(1);
-
 
         table[index] = itm;
 
