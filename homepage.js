@@ -1,64 +1,36 @@
 
 
-async function applicator(param) {
+function applicator(param) {
 
     var table = [];
 
-    let response = await fetch('https://tmdb.cub.red/?sort=now_playing&page=1');
+    const request = new XMLHttpRequest();
+    request.open('GET', 'https://tmdb.cub.red/?sort=now_playing&page=1', false);
 
-    let json =  await response.json(); // прочитать тело ответа как текст
+    request.send(null);
 
-    //console.log(json.results);
+    if (request.status === 200) {
 
-    json.results.forEach(function (item, index) {
+        const json = JSON.parse(request.responseText);
 
-        const date = new Date(item.release_date);
+        json.results.forEach(function (item, index) {
 
-        let itm = {};
-        itm.id = item.id
-        itm.title = item.title
-        itm.image = 'https://imagetmdb.cub.red/t/p/w300'+item.poster_path
-        itm.year = date.getFullYear();
-        itm.rate = item.vote_average
+            const date = new Date(item.release_date);
 
-        table[index] = itm;
+            let itm = {};
+            itm.id = item.id
+            itm.title = item.title
+            itm.image = item.poster_path
+            itm.year = date.getFullYear();
+            itm.rate = item.vote_average
 
+            table[index] = itm;
 
-    });
+        });
+    }
 
-
-    //console.log(table);
+    console.log(table);
 
     return table;
 }
-
-function applicatorOLD(param) {
-
-
-
-    let response = fetch('https://tmdb.cub.red/?sort=now_playing&page=1');
-
-    if (response.ok) {
-
-        //let json = response.json();
-
-        const obj = JSON.parse(response.json());
-
-        obj.results.forEach(function (item, i, arr) {
-
-            item.id,
-                item.name
-
-            //item.checked = $this.dataset.id === item.dataset.id;
-        });
-
-
-    } else {
-        alert("Ошибка HTTP: " + response.status);
-    }
-
-
-    return param;
-}
-
 
