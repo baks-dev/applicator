@@ -16,9 +16,11 @@
     "telegram" : "https://t.me/help"
   },
 
+
   "homepage": {
     "type": "js",
-    "path": "homepage.js"
+    "path": "homepage.js",
+    "files": ["js/filmix.js", "js/collaps.js"]
   },
 
   "detail": {
