@@ -1,6 +1,6 @@
 
 
-async function applicator(param) {
+async function applicator(params) {
 
     var table = [];
 
