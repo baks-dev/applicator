@@ -6,7 +6,7 @@ async function applicator(param) {
 
     let response = await fetch('https://tmdb.cub.red/?sort=now_playing&page=1');
 
-    let json =  await response.json(); // прочитать тело ответа как текст
+    let json =  await response.json();
 
     //console.log(json.results);
 
@@ -23,49 +23,45 @@ async function applicator(param) {
 
         table[index] = itm;
 
-
     });
 
-
-    //console.log(table);
-
     return table;
 }
 
-function applicatorOLD(param) {
-
-    var table = [];
-
-    const request = new XMLHttpRequest();
-    request.open('GET', 'https://tmdb.cub.red/?sort=now_playing&page=1', false);
-
-    request.send(null);
-
-    if (request.status === 200) {
-
-        const json = JSON.parse(request.responseText);
-
-
-        json.results.forEach(function (item, index) {
-
-            var date = new Date(item.release_date);
-
-            var itm = {};
-            itm.id = item.id
-            itm.title = item.title
-            itm.image = item.poster_path
-            itm.year = date.getFullYear();
-            itm.rate = item.vote_average
-
-            table[index] = itm;
-
-        });
-    }
-
-    console.log(table);
-
-    return table;
-}
+// function applicatorOLD(param) {
+//
+//     var table = [];
+//
+//     const request = new XMLHttpRequest();
+//     request.open('GET', 'https://tmdb.cub.red/?sort=now_playing&page=1', false);
+//
+//     request.send(null);
+//
+//     if (request.status === 200) {
+//
+//         const json = JSON.parse(request.responseText);
+//
+//
+//         json.results.forEach(function (item, index) {
+//
+//             var date = new Date(item.release_date);
+//
+//             var itm = {};
+//             itm.id = item.id
+//             itm.title = item.title
+//             itm.image = item.poster_path
+//             itm.year = date.getFullYear();
+//             itm.rate = item.vote_average
+//
+//             table[index] = itm;
+//
+//         });
+//     }
+//
+//     console.log(table);
+//
+//     return table;
+// }
 
 
 
